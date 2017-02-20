@@ -65,9 +65,16 @@ public class Client{
  	*Function to add User object to local Database. Allows user to sign in with registered credentials
 	*@param u instantiated User object to be added to Database.
  	*/
-	public void addUser(User u){
+	//stub
+	public void addUser(String username, String pword){
+		User new_user = new User();
+		new_user.setUsername(username);
+		new_user.setPassword(pword);
+		User u = new_user;
 		local.addUser(u.record());
 	}
+	
+
 
     /**
     *Function to add an event to currUser.myEvents. Queries the Database found at DatabaseConnection db. Effectively completes the "subscription" process of the currUser to this Event.
