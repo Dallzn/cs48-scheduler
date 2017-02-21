@@ -62,7 +62,7 @@ public class User extends ScheduleObject{
     	Iterator<ScheduleEvent> iter = myEvents.iterator();
     	while (iter.hasNext()){
     		ScheduleEvent ss = iter.next();
-    		if (s == ss)
+    		if (s.getID() == ss.getID())
     		{
     	    	this.myEvents.remove(s);
 
@@ -73,7 +73,7 @@ public class User extends ScheduleObject{
     	Iterator<ScheduleEvent> iter = myHostedEvents.iterator();
     	while (iter.hasNext()){
     		ScheduleEvent ss = iter.next();
-    		if (s == ss)
+    		if (s.getID() == ss.getID())
     		{
     	    	this.myHostedEvents.remove(s);
 
