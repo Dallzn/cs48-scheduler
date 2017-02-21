@@ -65,8 +65,11 @@ public class Client{
  	*Function to add User object to local Database. Allows user to sign in with registered credentials
 	*@param u instantiated User object to be added to Database.
  	*/
-	public void addUser(User u){
-		local.addUser(u.record());
+	public void addUser(){
+		User new_user = new User();
+		new_user.setUsername(username);
+		new_user.setPassword(pword);
+		local.addUser(new_user.record());
 	}
 
     /**
