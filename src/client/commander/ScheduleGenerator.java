@@ -9,6 +9,7 @@ public class ScheduleGenerator{
   private ArrayList<ScheduleEvent> events;
   private int number_of_events;
   private ArrayList<ArrayList<ScheduleEvent>> nodes;
+  private ArrayList<ScheduleEvent> output;
   
   public ScheduleGenerator(ArrayList<ScheduleEvent> e, int number){
     events = e;
@@ -18,6 +19,7 @@ public class ScheduleGenerator{
       ArrayList<ScheduleEvent> nodeList = new ArrayList<ScheduleEvent>();
       nodes.add(nodeList);
     }
+    output = new ArrayList<ScheduleEvent>();
   }
   
   public void sperate_events(){
@@ -35,9 +37,21 @@ public class ScheduleGenerator{
     	    	this.events.remove(ss);
     		}
     	}
-     }
+    }
   }
   
-  public void 
+  public void creat_schedule(){
+    do{
+        for (int i=0; i<this.number_of_events; i++){
+            int a = this.nodes.get(i).size();
+            Random random = new Random();
+            int index = random.nextInt(a);
+            ScheduleEvent randomEvent = this.nodes.get(i).get(index);
+            this.ouput.add(randomEvent);
+        }
+        int count = 0;
+
+      }while
+  } 
  
 }
