@@ -66,7 +66,10 @@ public class Client{
 	*@param u instantiated User object to be added to Database.
  	*/
 	public void addUser(User u){
-		local.addUser(u.record());
+		User new_user = new User();
+		new_user.setUsername(username);
+		new_user.setPassword(pword);
+		local.addUser(new_user.record());
 	}
 
     /**
