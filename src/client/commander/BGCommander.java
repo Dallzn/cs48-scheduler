@@ -18,6 +18,7 @@ import javax.xml.transform.TransformerException;
 public class BGCommander{
     //instance variables
     private Client client;
+    private UserInterface UI;
     private ScheduleGenerator gen;
     private static BGCommander command;
 
@@ -25,8 +26,24 @@ public class BGCommander{
     *BGCommander Constructor. DO NOT USE TO INSTANTIATE BGCommander. Instead use getBGCommander() function.
     */
     private BGCommander(){
+        UI = new UserInterface();
         client = new Client();
         gen = new ScheduleGenerator();
+    }
+    
+    class ButtonListener implements Actionlistener{
+        public void actionPerformed(ActionEvent e){
+            if(e.getSource() == "subscribe"){
+                int day = 
+                subscribe();
+            }
+            else if (e.getSource() == "unsubscribe"){
+                client.
+            }
+            else if (e.getSource() == "addUser"){
+                
+            }
+        }
     }
 
     /**
