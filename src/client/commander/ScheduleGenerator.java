@@ -32,7 +32,7 @@ public class ScheduleGenerator{
   }
   
   
-  public ArrayList<ScheduleEvent> creat_schedule(){
+  public ArrayList<ScheduleEvent> getSchedules(){
     do{
         ArrayList<ScheduleEvent> output = new ArrayList<ScheduleEvent>();
         for (int i=0; i<this.number_of_events; i++){
