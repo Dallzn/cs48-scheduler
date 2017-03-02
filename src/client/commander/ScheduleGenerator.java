@@ -10,9 +10,25 @@ public class ScheduleGenerator{
   private ArrayList<ScheduleEvent> events;
   private int number_of_events;
   
-  public ScheduleGenerator(ArrayList<ScheduleEvent> e, int number){
+  public ScheduleGenerator(ArrayList<ScheduleEvent> e){
     events = e;
-    number_of_events = number;
+    ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
+    copy = e;
+    int number = 0;
+    do{
+        ScheduleEvent hold = copy.get(0);
+        copy.remove(0);
+        Iterator<ScheduleEvent> iter = copy.iterator();
+        while (iter.hasNext()){
+          ScheduleEvent ss = iter.next();
+          if(hold.getID() == ss.getID()){
+            copy.remove(ss);
+          }
+        }
+        number++;
+      }while(copy.size()!=0)
+      number_of_events = number;
+      return true;
   }
   
   
@@ -64,28 +80,5 @@ public class ScheduleGenerator{
         }
       }while(copy.size()!=0)
       return true;
-  }
- 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+  }       
 }
