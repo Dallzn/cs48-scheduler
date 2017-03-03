@@ -38,6 +38,7 @@ public class ScheduleGenerator{
   public ArrayList<ScheduleEvent> getSchedules(){
     do{
         ArrayList<ScheduleEvent> output = new ArrayList<ScheduleEvent>();
+        //random select event add to array
         for (int i=0; i<this.number_of_events; i++){
             int a = events.size();
             Random random = new Random();
