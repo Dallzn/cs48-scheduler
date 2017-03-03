@@ -12,6 +12,8 @@ public class ScheduleGenerator{
   
   public ScheduleGenerator(ArrayList<ScheduleEvent> e){
     events = e;
+    
+    //count number of different events on the array
     ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
     copy = e;
     int number = 0;
@@ -27,6 +29,7 @@ public class ScheduleGenerator{
         }
         number++;
       }while(copy.size()!=0)
+      //store it in number_of_events
       number_of_events = number;
       return true;
   }
@@ -42,7 +45,7 @@ public class ScheduleGenerator{
             ScheduleEvent randomEvent = events.get(index);
             ouput.add(randomEvent);
         }
-    }while(check_ID(output==false) || check_timeblock(output==false)
+    }while(check_ID(output)==false || check_timeblock(output)==false)
            return output;
   }
             
@@ -65,7 +68,6 @@ public class ScheduleGenerator{
            
   public boolean check_timeblock(ArrayList<ScheduleEvent> e){
     ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
-    copy = e;
     copy = e;
     do{
         ScheduleEvent hold = copy.get(0);
