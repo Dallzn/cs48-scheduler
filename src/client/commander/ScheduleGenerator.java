@@ -50,6 +50,7 @@ public class ScheduleGenerator{
            return output;
   }
             
+  //iterate arraylist to check collision on ID
   public boolean check_ID(ArrayList<ScheduleEvent> e){
     ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
     copy = e;
@@ -67,6 +68,7 @@ public class ScheduleGenerator{
       return true;
   }
            
+  //iterate array check if collision on time
   public boolean check_timeblock(ArrayList<ScheduleEvent> e){
     ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
     copy = e;
