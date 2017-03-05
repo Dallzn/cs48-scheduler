@@ -2,6 +2,7 @@ package client.commander;
 import client.app.obj.ScheduleEvent;
 import client.app.obj.User;
 
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.Iterator;
 
