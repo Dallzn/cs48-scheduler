@@ -36,7 +36,7 @@ public class ScheduleGenerator{
 	  
 	  
 	  public ArrayList<ScheduleEvent> getSchedules(){
-		  ArrayList<ScheduleEvent> output = new ArrayList<ScheduleEvent>();
+		ArrayList<ScheduleEvent> output = new ArrayList<ScheduleEvent>();
 	    do{
 	    	if (output.size()!=0){
 	    		output.clear();
@@ -50,7 +50,6 @@ public class ScheduleGenerator{
 	            ScheduleEvent randomEvent = events.get(index);
 	            output.add(randomEvent);}
 	    }while(check_timeblock(output)==false || check_ID(output)==false);
-	    //check_ID(output)==false || check_timeblock(output)==false
 	    return output;
 	  }
 	            
