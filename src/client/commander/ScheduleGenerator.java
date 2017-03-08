@@ -14,7 +14,7 @@ public class ScheduleGenerator{
 	  public ScheduleGenerator(ArrayList<ScheduleEvent> e){
 	    events = e;
 	    
-	    //count number of different events on the array
+	    //count numbers of different events on the array
 	    ArrayList<ScheduleEvent> copy = new ArrayList<ScheduleEvent>();
 	    copy = new ArrayList<ScheduleEvent>(e);
 	    int number = 0;
